@@ -74,7 +74,7 @@
 							<button type="submit" class="btn btn-primary">Cadastrar</button>
 						<button type="reset" class="btn btn-secondary">Limpar</button>
 								<a href="principal.php"><button type="button" class="btn btn-danger">Voltar</button></a>
-								<a href="?pagina=paciente/paciente-c.php" title="Consultar"><img src="./imagens/Pesquisar.bmp" class="botaoConsultar"/></a>
+								<a href="?pagina=paciente/paciente-c.php" title="Consultar"><img src="./images/Pesquisar.bmp" class="botaoConsultar"/></a>
 							</td>
 						</tr>
 				</table>

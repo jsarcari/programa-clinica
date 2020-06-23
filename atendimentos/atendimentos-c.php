@@ -39,8 +39,8 @@
 					<?php } ?>
 					
 					<tr>
-					<td><a href="./principal.php?pagina=atendimentos/atendimentos-f.php" title="Atendimento"><img name="botaoVoltar" src="./imagens/voltar.png"/></a><a href="?pagina=atendimentos/atendimentos-c.php" title="Atualizar">
-					<img name="botaoAtualizar" src="./imagens/atualizar.bmp"/></a></td>
+					<td><a href="./principal.php?pagina=atendimentos/atendimentos-f.php" title="Atendimento"><img name="botaoVoltar" src="./images/voltar.png"/></a><a href="?pagina=atendimentos/atendimentos-c.php" title="Atualizar">
+					<img name="botaoAtualizar" src="./images/atualizar.bmp"/></a></td>
 					</table>
 					</div>
 				<?php } ?>

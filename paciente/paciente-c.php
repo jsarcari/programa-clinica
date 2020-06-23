@@ -36,13 +36,13 @@
 						<td><?php		echo date_format(date_create($paciente['nascimentoPaciente']),'d/m/Y');	?></td>
 						<td><?php		echo $paciente['responsavelPaciente'];	?></td>
 						<td><?php		echo $paciente['dddResponsavel'] . " " . $paciente['telefoneResponsavel']; ?></td>
-						<td><a href="paciente/cadastroPaciente-p.php?acao=1&chave=<?php echo $paciente['codigoPaciente']; ?>"><img src="./imagens/gridalterar.bmp" title="Alterar"/></a></td>
-						<td><a href="paciente/cadastroPaciente-p.php?acao=2&chave=<?php echo $paciente['codigoPaciente']; ?>"><img src="./imagens/gridexcluir.bmp" title="Excluir"/></a></td>
+						<td><a href="paciente/cadastroPaciente-p.php?acao=1&chave=<?php echo $paciente['codigoPaciente']; ?>"><img src="./images/gridalterar.bmp" title="Alterar"/></a></td>
+						<td><a href="paciente/cadastroPaciente-p.php?acao=2&chave=<?php echo $paciente['codigoPaciente']; ?>"><img src="./images/gridexcluir.bmp" title="Excluir"/></a></td>
 						</tr>
 					<?php } ?>
 					
 					<tr>
-					<td><a href="./principal.php?pagina=paciente/cadastroPaciente-f.php" title="Paciente"><img name="botaoVoltar" src="./imagens/voltar.png"/></a><a href="?pagina=paciente/paciente-c.php" title="Atualizar"><img name="botaoAtualizar" src="./imagens/atualizar.bmp"/></a></td>
+					<td><a href="./principal.php?pagina=paciente/cadastroPaciente-f.php" title="Paciente"><img name="botaoVoltar" src="./images/voltar.png"/></a><a href="?pagina=paciente/paciente-c.php" title="Atualizar"><img name="botaoAtualizar" src="./images/atualizar.bmp"/></a></td>
 					</table>
 					</div>
 				<?php } ?>

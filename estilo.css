@@ -3,7 +3,7 @@ body {
 }
 
 header {
-	background: url("imagens/cabecalho.jpg") no-repeat center center;
+	background: url("images/cabecalho.jpg") no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;

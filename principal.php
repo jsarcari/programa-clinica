@@ -22,7 +22,7 @@
 	<body>
 		<header>
 			<div class="caixa">
-				<img src="imagens/transp.png">
+				<img src="images/transp.png">
 				<nav>
 					<ul>
 						<li><a href="?pagina=home.php">Home</a></li>
