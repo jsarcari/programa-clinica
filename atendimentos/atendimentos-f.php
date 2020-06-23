@@ -12,7 +12,7 @@
 		<meta name="decription" content="formularios em HTML">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Atendimentos</title>
-		<link rel="stylesheet" type="text/css" href="../estilo.css"/>
+		<link rel="stylesheet" type="text/css" href="./estilo.css"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script type="text/javascript" src="javascript/validacaoAtendimentos.js"></script>
 		<script type="text/javascript" src="javascript/imprimirIdade.js"></script>
@@ -86,10 +86,11 @@
 					<td colspan=4><textarea name="desdobramentoAtendimento" value="" placeholder="Informe aqui o desdobramento do antendimento"></textarea></td>
 				</tr>
 				<tr>
-					<td colspan=4><input type="submit" title="Gravar" value="Gravar"/>
-						<input type="reset" title="Limpar" value="Limpar"/>
-						<a href="principal.php"><input type="button" title="Voltar" value="Voltar"/></a>
-						<span class="botaoConsultar"><a href="?pagina=atendimentos/atendimentos-c.php" title="Consultar"><img src="./imagens/Pesquisar.bmp"/></a></span>
+					<td colspan=4 class="rodape-tabela">
+						<button type="submit" class="btn btn-primary">Cadastrar</button>
+						<button type="reset" class="btn btn-secondary">Limpar</button>
+						<a href="principal.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+						<a href="?pagina=atendimentos/atendimentos-c.php" title="Consultar"><img src="./imagens/Pesquisar.bmp" class="botaoConsultar"/></a>
 					</td>
 				</tr>
 			</table>

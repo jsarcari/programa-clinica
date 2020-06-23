@@ -60,7 +60,7 @@ nav ul li ul {
 }
 
 a {
-	text-decoration: none;
+	color: #000000;
 }
 
 .login {
@@ -79,6 +79,38 @@ main {
 	background: #CFCFCF;
 }
 
+.paginas {
+    width: 940px;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.paginas li {
+	background: #ffffff;
+    display: inline-block;
+	text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.2%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.paginas li:hover {
+    border-color: #c78c19;
+}
+
+.paginas li:hover h2 {
+    font-size: 34px;
+}
+
+.paginas h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .formulario {
 	background: #ffffff;
 	width: 50%;
@@ -89,6 +121,12 @@ main {
     box-sizing: border-box;
 	border: 1px solid #000000;
     border-radius: 10px;
+}
+
+.botaoConsultar {
+	padding-top: 7px;
+	float: right;
+	text-align: right;
 }
 
 table {
@@ -141,20 +179,8 @@ table {
 	width: 170px;
 }
 
-.tabelaRegistro {
-	margin: 15px auto;
+#tabelaRegistro {
 	background-color: #fff;
-	text-align: center;
-	width: 800px;
-	height: 240px;
-}
-
-.tabelaAlteracao {
-	margin: 15px auto;
-	background-color: #fff;
-	text-align: center;
-	width: 600px;
-	height: 200px;
 }
 
 h3 {

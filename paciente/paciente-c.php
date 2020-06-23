@@ -15,15 +15,15 @@
 			
 			$pacientes = $paciente->listarPaciente();
 		?>
-		<table class="tabelaRegistro" border="1">
-				<tr><td colspan="9"><h2>Pacientes</h2></td></tr>
+		<table class="table table-hover" id="tabelaRegistro">
+				<tr><td colspan="8"><h2>Pacientes</h2></td></tr>
 				<tr><th>Código</th><th>Nome</th><th>Sexo</th>
-				<th>Nascimento</th><th>Responsável</th><th>DDD</th>
+				<th>Nascimento</th><th>Responsável</th>
 				<th>Telefone</th><th colspan=3>Ação</th></tr>
 				
 				<?php if (empty($pacientes)) { ?>
-					<tr><td colspan=8>Sem registros para consultar</td></tr>
-					<td align="center" colspan=8>
+					<tr><td colspan=7>Sem registros para consultar</td></tr>
+					<td align="center" colspan=7>
 					<a href="./principal.php?pagina=paciente/cadastroPaciente-f.php"><input type="button" title="Voltar" value="Voltar">
 					</td>
 				<?php } else {
@@ -35,8 +35,7 @@
 						<td><?php		echo $paciente['sexoPaciente'];	?></td>
 						<td><?php		echo date_format(date_create($paciente['nascimentoPaciente']),'d/m/Y');	?></td>
 						<td><?php		echo $paciente['responsavelPaciente'];	?></td>
-						<td><?php		echo $paciente['dddResponsavel'];	?></td>
-						<td><?php		echo $paciente['telefoneResponsavel']; ?></td>
+						<td><?php		echo $paciente['dddResponsavel'] . " " . $paciente['telefoneResponsavel']; ?></td>
 						<td><a href="paciente/cadastroPaciente-p.php?acao=1&chave=<?php echo $paciente['codigoPaciente']; ?>"><img src="./imagens/gridalterar.bmp" title="Alterar"/></a></td>
 						<td><a href="paciente/cadastroPaciente-p.php?acao=2&chave=<?php echo $paciente['codigoPaciente']; ?>"><img src="./imagens/gridexcluir.bmp" title="Excluir"/></a></td>
 						</tr>

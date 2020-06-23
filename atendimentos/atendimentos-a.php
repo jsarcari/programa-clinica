@@ -96,8 +96,9 @@
 					<td colspan=4><textarea name="desdobramentoAtendimento" value="<?php echo $desdobramentoAtendimento; ?>" placeholder="Informe aqui o desdobramento do antendimento"></textarea></td>
 				</tr>
 				<tr>
-					<td colspan=4><input type="submit" title="Gravar" value="Gravar"/>
-						<a href="?pagina=atendimentos/atendimentos-c.php"><input type="button" title="Voltar" value="Voltar"/></a>
+					<td colspan=4 class="rodape-tabela">
+						<button type="submit" class="btn btn-primary">Alterar</button>
+						<a href="?pagina=atendimentos/atendimentos-c.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
 					</td>
 				</tr>
 			</table>

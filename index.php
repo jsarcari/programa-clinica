@@ -12,7 +12,7 @@
 		<form name="formLogin" action="login-p.php" method="POST" onsubmit="return validar();">
 			<table class="login">
 				<tr rowspan=3>
-					<td colspan=2><img class="cabec" width="15%" src="./images/images.jpg"/></td>
+					<td colspan=2><img class="cabec" width="15%" src="./imagens/atendimento.jpg"/></td>
 				</tr>
 				<tr>
 					<td colspan=2><h2>Login</h2></td>

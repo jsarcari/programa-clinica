@@ -91,8 +91,8 @@
 			</tr>
 			<tr>
 				<td colspan=4 class="rodape-tabela">
-					<input type="submit" title="Gravar" value="Gravar"/>
-					<a href="?pagina=paciente/paciente-c.php"><input type="button" title="Voltar" value="Voltar"/></a>
+					<button type="submit" class="btn btn-primary">Alterar</button>
+					<a href="?pagina=paciente/paciente-c.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
 				</td>
 			</tr>
 		</table>

@@ -14,7 +14,7 @@
 			$atendimentos = $atendimento->listarAtendimento();
 		?>
 
-		<table class="tabelaRegistro" border=1>
+		<table class="table table-hover" id="tabelaRegistro">
 				<tr><td colspan="6"><h2>Atendimentos</h2></td></tr>
 				
 				<tr><th>Código</th><th>Data do atendimento</th>

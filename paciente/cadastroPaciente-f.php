@@ -71,10 +71,10 @@
 						</tr>
 						<tr>
 							<td colspan=4 class="rodape-tabela">
-								<input type="submit" title="Gravar" value="Gravar"/>
-								<input type="reset" title="Limpar" value="Limpar"/>
-								<a href="principal.php"><input type="button" title="Voltar" value="Voltar"/></a>
-								<span class="botaoConsultar"><a href="?pagina=paciente/paciente-c.php" title="Consultar"><img src="./imagens/Pesquisar.bmp"/></a></span>
+							<button type="submit" class="btn btn-primary">Cadastrar</button>
+						<button type="reset" class="btn btn-secondary">Limpar</button>
+								<a href="principal.php"><button type="button" class="btn btn-danger">Voltar</button></a>
+								<a href="?pagina=paciente/paciente-c.php" title="Consultar"><img src="./imagens/Pesquisar.bmp" class="botaoConsultar"/></a>
 							</td>
 						</tr>
 				</table>
