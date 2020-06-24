@@ -16,7 +16,6 @@
         <link rel="stylesheet" type="text/css" href="./estilo.css"/>
     </head>
     <body>
-        <main>
         <ul class="paginas">
             <li>
                 <h2>Paciente</h2>
@@ -45,6 +44,5 @@
                 </p>
             </li>
         </ul>
-        </main>
     </body>
 </html>

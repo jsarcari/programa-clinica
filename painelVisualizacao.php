@@ -11,42 +11,30 @@
 		<title>Painel de atendimentos</title>
 		<link rel="stylesheet" type="text/css" href="estilo.css"/>
 	<head>
-	<body>
+	<body style="background-color=#004869">
+		<!--<div class="painel">
 		<table>
 			<tr>
-				<td colspan=2><h2>PAINEL DE ATENDIMENTOS</h2></td>
+				<td colspan=2><h2>Painel de atendimentos</h2></td>
 			</tr>
 			<tr>
 				<td>
 					<fieldset class="atendimentosSexo">
-						<legend>Atendimentos - Sexo</legend>
-						<table border=0 class="tabelaVisualizacao">
-							<tr>
-								<td>Masculino</td>
-								<td>Feminino</td>
-							</tr>
-							<tr>
-								<td>
+						<legend id="legendaPainel">Atendimentos - Sexo</legend>
+								Masculino Feminino
 									<h3>
-									<?php $atendimento->visualizacaoAtendimento("M");?>
 									</h3>
-								</td>
-								<td>
 									<h3>
-									<?php $atendimento->visualizacaoAtendimento("F");?>
 									</h3>
-								</td>
-							</tr>
-						</table>
 					</fieldset>
 				</td>
 				<td>
 					<fieldset class="totalAtendimentos">
-						<legend>Total de atendimentos</legend>
+						<legend id="legendaPainel">Total de atendimentos</legend>
 						<br>
 						<table border=0 class="tabelaVisualizacao">
 							<tr>
-								<td><h3><?php $atendimento->totalAtendimento();?></h3></td>
+								<td><h3>
 							</tr>
 						</table>
 					</fieldset>
@@ -58,27 +46,33 @@
 			<tr>
 				<td>
 					<fieldset class="senhaChamada">
-						<legend>Senha chamada</legend>
+						<legend id="legendaPainel">Última senha chamada</legend>
 						<br>
 						<table border=0 class="tabelaVisualizacao">
 							<tr>
-								<td><h3><?php echo $atendimento->senhaAtendimento(1);?></h3></td>
+								<td><h3>
 							</tr>
 						</table>
 					</fieldset>
 				</td>
 				<td>
 					<fieldset class="guiche">
-						<legend>Guichê</legend>
+						<legend id="legendaPainel">Guichê</legend>
 						<br>
 						<table border=0 class="tabelaVisualizacao">
 							<tr>
-								<td><h3><?php echo $atendimento->guicheAtendimento();?></h3></td>
+								<td><h3>
 							</tr>
 						</table>
 					</fieldset>
 				</td>
 			</tr>
 		</table>
+		</div-->
+		<p>Senha</p>
+		<h5><?php 	$chamada = $atendimento->ultimaChamada();
+					echo $chamada['senhaAtendimento']; ?></h5>
+		<p>Guichê</p>
+		<h5><?php echo $chamada['guicheAtendimento']; ?></h5>
 	</body>
 </html>

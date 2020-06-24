@@ -5,7 +5,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Alterar atendimento</title>
 		<link rel="stylesheet" type="text/css" href="../estilo.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script type="text/javascript" src="javascript/validacaoAtendimentos.js"></script>
 		<script type="text/javascript" src="javascript/imprimirIdade.js"></script>
 	</head>

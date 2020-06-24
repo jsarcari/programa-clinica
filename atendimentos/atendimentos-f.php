@@ -11,9 +11,8 @@
 	<head>
 		<meta name="decription" content="formularios em HTML">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Atendimentos</title>
+		<title>Atendimento</title>
 		<link rel="stylesheet" type="text/css" href="./estilo.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script type="text/javascript" src="javascript/validacaoAtendimentos.js"></script>
 		<script type="text/javascript" src="javascript/imprimirIdade.js"></script>
 	</head>
@@ -24,14 +23,14 @@
 		<form name="form1" method="POST" action="atendimentos/atendimentos-p.php?acao=0" onsubmit="return validarAtendimento();">
 			<table>
 				<tr>
-					<td colspan=4><h2>Atendimentos</h2></td>
+					<td colspan=4><h2>Atendimento</h2></td>
 				</tr>
 				<tr>
 					<td colspan=4>Campos com * são de preenchimento obrigatório.</td>
 				</tr>
 				<tr>
 					<td><label for="senhaAtendimento">Senha *</label></td>
-					<td><input type="text" size="2" name="senhaAtendimento" value="<?php echo $atendimento->senhaAtendimento(2);?>"/></td>
+					<td><input type="text" size="2" name="senhaAtendimento" value="<?php echo $atendimento->senhaAtendimento();?>"/></td>
 					<td><label for="guicheAtendimento">Guichê *</label></td>
 					<td><select name="guicheAtendimento"><option value="">Guichê</option>
 						<option value="1">1</option>

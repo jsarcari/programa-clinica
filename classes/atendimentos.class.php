@@ -128,20 +128,20 @@
 				$conexao = new Conexao();
 				$pdo = $conexao->conectar();
 				$query = $pdo->prepare("	INSERT INTO atendimento (
-															senhaAtendimento,
-															guicheAtendimento,
-															dataAtendimento,
-															horaAtendimento,
-															codigoPaciente,
-															convenioAtendimento,
-															desdobramentoAtendimento) 
+														senhaAtendimento,
+														guicheAtendimento,
+														dataAtendimento,
+														horaAtendimento,
+														codigoPaciente,
+														convenioAtendimento,
+														desdobramentoAtendimento) 
 											VALUES (:senha, 
-															:guiche, 
-															:data, 
-															:hora, 
-															:paciente, 
-															:convenio,
-															:desdobramento);");
+													:guiche, 
+													:data, 
+													:hora, 
+													:paciente, 
+													:convenio,
+													:desdobramento);");
 				$query->bindValue(':senha', $this->getSenhaAtendimento());
 				$query->bindValue(':guiche', $this->getGuicheAtendimento());
 				$query->bindValue(':data', $this->converteData($this->getDataAtendimento()));
@@ -155,6 +155,7 @@
 				return $nr;
 
 			} catch (PDOException $e) {
+				return 0;
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
@@ -164,15 +165,15 @@
 				$conexao = new Conexao();
 				$pdo = $conexao->conectar();
 				$query = $pdo->prepare("	UPDATE atendimento
-												SET codigoAtendimento			= :cod,
-													senhaAtendimento			= :senha,
-													guicheAtendimento			= :guiche,
-													dataAtendimento				= :data,							
-													horaAtendimento				= :hora,
-													codigoPaciente				= :paciente,
-													convenioAtendimento			= :convenio, 
-													desdobramentoAtendimento	= :desdobramento
-												WHERE codigoAtendimento			= :codigo;");
+											SET codigoAtendimento			= :cod,
+												senhaAtendimento			= :senha,
+												guicheAtendimento			= :guiche,
+												dataAtendimento				= :data,							
+												horaAtendimento				= :hora,
+												codigoPaciente				= :paciente,
+												convenioAtendimento			= :convenio, 
+												desdobramentoAtendimento	= :desdobramento
+											WHERE codigoAtendimento			= :codigo;");
 				$query->bindValue(':cod', $this->getCodigoAtendimento());
 				$query->bindValue(':senha', $this->getSenhaAtendimento());
 				$query->bindValue(':guiche', $this->getGuicheAtendimento());
@@ -188,6 +189,7 @@
 				return $nr;
 
 			} catch (PDOException $e) {
+				return 0;
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
@@ -206,6 +208,7 @@
 				return $nr;
 
 			} catch (PDOException $e) {
+				return 0;
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
@@ -223,7 +226,7 @@
 													convenioAtendimento, 
 													desdobramentoAtendimento
 											FROM	atendimento NATURAL JOIN paciente
-											ORDER BY	codigoAtendimento");
+											ORDER BY codigoAtendimento DESC");
 				$query->execute();
 				$atendimentos	= $query->fetchAll();
 				$pdo = $conexao->encerrar();
@@ -234,42 +237,7 @@
 			}
 		}
 		
-		public function visualizacaoAtendimento($sexoPaciente) {
-			try {
-				$conexao = new Conexao();
-				$pdo = $conexao->conectar();
-				$query = $pdo->prepare("	SELECT COUNT(a.codigoAtendimento) AS quantidade
-											FROM atendimento a
-											INNER JOIN paciente p ON p.codigoPaciente = a.codigoPaciente
-											WHERE p.sexoPaciente = :sexo;");
-				$query->bindValue(':sexo',$sexoPaciente);
-				$query->execute();
-				$res	=	$query->fetchObject();
-				echo $res->quantidade;
-				$pdo = $conexao->encerrar();
-			
-			} catch (PDOException $e) {
-				exit('Erro: ' . $e->getMessage());
-			}
-		}	
-		
-		public function totalAtendimento(){
-			try {
-				$conexao = new Conexao();
-				$pdo = $conexao->conectar();
-				$query = $pdo->prepare("	SELECT COUNT(codigoAtendimento) AS quantidade
-											FROM atendimento");
-				$query->execute();			
-				$res	=	$query->fetchObject();
-				echo $res->quantidade;
-				$pdo = $conexao->encerrar();
-
-			} catch (PDOException $e) {
-				exit('Erro: ' . $e->getMessage());
-			}
-		}
-		
-		public function senhaAtendimento($destino){
+		public function senhaAtendimento(){
 			try {
 				$conexao = new Conexao();
 				$pdo = $conexao->conectar();
@@ -282,34 +250,27 @@
 				$res	=	$query->fetchObject();			
 				$pdo = $conexao->encerrar();
 
-				switch($destino){
-					case 1:
-						return $res->senhaAtendimento;
-						break;
-					case 2:
-						return $res->senhaAtendimento+1;
-						break;		
-				}
+				return $res->senhaAtendimento+1;
 
 			} catch (PDOException $e) {
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
-		
-		public function guicheAtendimento(){
+
+		public function ultimaChamada() {
 			try {
 				$conexao = new Conexao();
 				$pdo = $conexao->conectar();
-				$query = $pdo->prepare("	SELECT	guicheAtendimento
-												FROM	atendimento
-												WHERE codigoAtendimento = (	SELECT MAX(codigoAtendimento)
+				$query = $pdo->prepare("	SELECT	senhaAtendimento,
+													guicheAtendimento,
+													dataAtendimento,
+													horaAtendimento
+											FROM	atendimento
+											WHERE	codigoAtendimento = (	SELECT MAX(codigoAtendimento)
 																			FROM atendimento);");
-							
 				$query->execute();
-				$res	=	$query->fetchObject();
-				$pdo = $conexao->encerrar();
-				return $res->guicheAtendimento;
-
+				$res = $query->fetch();
+				return $res;
 			} catch (PDOException $e) {
 				exit('Erro: ' . $e->getMessage());
 			}

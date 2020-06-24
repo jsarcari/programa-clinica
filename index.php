@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Login</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="estilo.css"/>
 		<script type="text/javascript" src="javascript/validacaoLogin.js"></script>
 	</head>
-	<body>
+	<body style="background: url('images/fundo.jpg') no-repeat center center;">
 			
 		<form name="formLogin" action="login-p.php" method="POST" onsubmit="return validar();">
 			<table class="login">

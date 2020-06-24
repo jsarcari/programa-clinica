@@ -112,6 +112,7 @@
 				return $nr;
 
 			} catch (PDOException $e) {
+				return 0;
 				exit('Erro: ' . $e->getMessage());
 			}
 		}		
@@ -143,6 +144,7 @@
 				return $nr;
 			
 			} catch (PDOException $e) {
+				return 0;
 				exit('Erro: ' . $e->getMessage());
 			}
 						
@@ -162,6 +164,7 @@
 				return $nr;
 
 			} catch (PDOException $e) {
+				return 0;
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
@@ -178,7 +181,7 @@
 													dddResponsavel, 
 													telefoneResponsavel
 											FROM	paciente
-											ORDER BY	codigoPaciente");
+											ORDER BY nomePaciente");
 				$query->execute();
 				$pacientes	= $query->fetchAll();
 				$pdo = $conexao->encerrar();
