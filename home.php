@@ -16,33 +16,35 @@
         <link rel="stylesheet" type="text/css" href="./estilo.css"/>
     </head>
     <body>
-        <ul class="paginas">
-            <li>
-                <h2>Paciente</h2>
-                <img  width="80%" src="images/paciente.jpeg">
-                <p></p>
-                <p>
-                    <a href="principal.php?pagina=paciente/paciente-c.php"><span class="fas fa-list"></span>Listar</a>
-                    &nbsp;<a href="principal.php?pagina=paciente/cadastroPaciente-f.php"><span class="fas fa-plus-circle"></span>Cadastrar</a>
-                </p>
-            </li>
-            <li>
-                <h2>Atendimento</h2>
-                <img width="79%" src="images/atendimento.jpg">
-                <p></p>
-                <p>
-                    <a href="principal.php?pagina=atendimentos/atendimentos-c.php"><span class="fas fa-list"></span>Listar</a>
-                    &nbsp;<a href="principal.php?pagina=atendimentos/atendimentos-f.php"><span class="fas fa-plus-circle"></span>Cadastrar</a>
-                </p>
-            </li>
-            <li>
-                <h2>Painel</h2>
-                <img width="80%" src="images/painel.png">
-                <p></p>
-                <p>
-                    <a href="principal.php?pagina=painelVisualizacao.php"><span class="fab fa-sistrix"></span>Visualizar</a>
-                </p>
-            </li>
-        </ul>
+        <main class="normal">
+            <ul class="paginas">
+                <li>
+                    <h2>Paciente</h2>
+                    <img  width="80%" src="images/paciente.jpeg">
+                    <p></p>
+                    <p>
+                        <a href="principal.php?pagina=paciente/paciente-c.php"><span class="fas fa-list"></span>Listar</a>
+                        &nbsp;<a href="principal.php?pagina=paciente/cadastroPaciente-f.php"><span class="fas fa-plus-circle"></span>Cadastrar</a>
+                    </p>
+                </li>
+                <li>
+                    <h3>Atendimento</h3>
+                    <img width="80%" src="images/atendimento.jpg">
+                    <p></p>
+                    <p>
+                        <a href="principal.php?pagina=atendimentos/atendimentos-c.php"><span class="fas fa-list"></span>Listar</a>
+                        &nbsp;<a href="principal.php?pagina=atendimentos/atendimentos-f.php"><span class="fas fa-plus-circle"></span>Cadastrar</a>
+                    </p>
+                </li>
+                <li>
+                    <h2>Painel</h2>
+                    <img width="80%" src="images/painel.png">
+                    <p></p>
+                    <p>
+                        <a href="principal.php?pagina=painelVisualizacao.php"><span class="fab fa-sistrix"></span>Visualizar</a>
+                    </p>
+                </li>
+            </ul>
+    </main>
     </body>
 </html>

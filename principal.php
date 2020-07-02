@@ -25,7 +25,6 @@
 	<body>
 		<header>
 			<div class="caixa">
-				<img src="images/transp.png">
 				<nav>
 					<ul>
 						<li><a href="?pagina=home.php">Home</a></li>
@@ -37,7 +36,6 @@
 				</nav>
 			</div>
 		</header>
-		<main>
 			<?php
 				if (isset($_GET['pagina'])) {
 					include($_GET['pagina']);
@@ -45,7 +43,6 @@
 					include("home.php");
 				}
 			?>
-		</main>
 		<footer>
 		<p class="copyright">&copy; Juan dos Santos Arcari - 2020</p>
 		</footer>
