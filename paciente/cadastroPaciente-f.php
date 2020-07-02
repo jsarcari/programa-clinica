@@ -60,10 +60,10 @@
 												<td colspan=2>Os campos seguintes são obrigatórios para menores de 18 anos.</td>
 											</tr>
 											<tr>
-												<td><label for="responsavelPaciente">Nome </label></td><td><input required="required" type="text" size="28" name="responsavelPaciente" value=""/></td>
+												<td><label for="responsavelPaciente">Nome </label></td><td><input disabled required="required" type="text" size="28" name="responsavelPaciente" value=""/></td>
 											</tr>
 											<tr>
-												<td><label for="telefoneResponsavel">Telefone </label></td><td><input type="text" size="2" name="dddResponsavel" required="required" value="" placeholder="DDD" maxlength="2"/>  <input type="text" required="required" name="telefoneResponsavel"/></td>
+												<td><label for="telefoneResponsavel">Telefone </label></td><td><input disabled type="text" size="2" name="dddResponsavel" required="required" value="" placeholder="DDD" maxlength="2"/>  <input disabled type="text" required="required" name="telefoneResponsavel"/></td>
 											</tr>
 										</table>
 									</fieldset>
