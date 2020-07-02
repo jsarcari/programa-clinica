@@ -8,6 +8,12 @@ header {
 	height: 120px;
 }
 
+footer {
+	background: url("images/rodape.jpg") no-repeat center center;
+	height: 63px;
+	text-align: center;
+}
+
 .caixa {
 	width: 900px;
     position: relative;
@@ -76,7 +82,7 @@ a {
 	margin-left: 164px;
 	width: 960px;
 	min-height: 410px;
-	background: url("images/fundo.jpg") repeat-y;
+	background: #004869;
 }
 
 .paginas {
@@ -206,15 +212,17 @@ table {
 #tituloPainel {
 	position: relative;
 	color: #1b191a;
-	bottom: 80px;
+	bottom: 75px;
 	font-size: 40px;
 	font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 	font-weight: bolder;
-	background-color: #e6e6e6;
+	background-color: #e6f1f3;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 #ultima {
-	padding-top: 80px;
+	padding-top: 75px;
 	width: 66%;
 	display: inline-block;
 }
@@ -233,11 +241,26 @@ table {
 
 #dataUltima {
 	position: relative;
-	top: 86px;
+	top: 75px;
 	background-color: #181818;
 	color: #727274;
 	padding-top: 2px;
 	padding-bottom: 6px;
+}
+
+#tabelaUltimas {
+	position: relative;
+}
+
+.tabelaChamadas {
+	font-family: Arial;
+	font-size: 18px;
+	text-align: justify;
+	width: 100%;
+}
+
+.tabelaChamadas td {
+	padding: 3.9px;
 }
 
 h3 {
@@ -262,7 +285,7 @@ textarea {
 }
 
 .copyright {
-    color: #ffffff;
-    font-size: 13px;
-    margin-top: 20px;
+	padding-top: 10px;
+	font-size: 13px;
+	font-family: arvo;
 }

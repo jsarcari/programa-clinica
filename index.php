@@ -18,7 +18,7 @@
 					<td colspan=2><h2>Login</h2></td>
 				</tr>
 				<tr>
-					<td>Usuario *</td><td><input type="text" name="usuario" value=""/></td>
+					<td>Usuário *</td><td><input type="text" name="usuario" value=""/></td>
 				</tr>
 				<tr>
 					<td>Senha *</td><td><input type="password" name="senha" value=""/></td>

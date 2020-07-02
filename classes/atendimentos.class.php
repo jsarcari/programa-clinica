@@ -276,6 +276,24 @@
 			}
 		}
 
+		public function ultimasChamadas() {
+			try {
+				$conexao = new Conexao();
+				$pdo = $conexao->conectar();
+				$query = $pdo->prepare("	SELECT	senhaAtendimento, 
+													guicheAtendimento
+											FROM	atendimento
+											ORDER BY codigoAtendimento DESC
+											LIMIT	3");
+				$query->execute();
+				$atendimentos	= $query->fetchAll();
+				$pdo = $conexao->encerrar();
+				return $atendimentos;
+			} catch (PDOException $e) {
+				exit('Erro: ' . $e->getMessage());
+			}
+		}
+
 		public function localizarAtendimento($codigoAtendimento) {
 			try {
 				$conexao = new Conexao();
