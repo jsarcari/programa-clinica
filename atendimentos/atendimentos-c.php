@@ -16,7 +16,7 @@
 			<table class="table table-hover" id="tabelaRegistro">
 				<tr><td colspan="6"><h2>Atendimentos</h2></td></tr>
 				
-				<tr><th>Código</th><th>Data do atendimento</th>
+				<tr><th>Código</th><th>Data</th>
 				<th>Paciente</th><th>Convênio</th><th colspan=2>Ação</th></tr>
 				
 				<?php if (empty($atendimentos)) { ?>
@@ -29,7 +29,7 @@
 						<tr>
 						
 							<td><b> <?php	echo $atendimento['codigoAtendimento'];	?></td>
-							<td><?php		echo date_format(date_create($atendimento['dataAtendimento']),'d/m/Y') . "  " . 	$atendimento['horaAtendimento']; ?></td>
+							<td><?php		echo date_format(date_create($atendimento['dataAtendimento']),'d/m/Y') . "  " . date_format(date_create($atendimento['horaAtendimento']),'H:i'); ?></td>
 							<td><?php		echo $atendimento['nomePaciente'];	?></td>
 							<td><?php 		echo $atendimento['convenioAtendimento']; ?></td>
 							<td><a href="atendimentos/atendimentos-p.php?acao=1&chave=<?php echo $atendimento['codigoAtendimento']; ?>"><img src="./images/gridalterar.bmp" title="Alterar"/></a></td>

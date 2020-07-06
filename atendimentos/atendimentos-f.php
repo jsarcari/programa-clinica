@@ -52,7 +52,7 @@
 								$horaAtendimento = date("H:i:s");
 							?>
 							<td>
-							<?php echo $horaAtendimento	?><input type="hidden" name="horaAtendimento" value="<?php echo $horaAtendimento;?>"/></td>
+							<?php echo date_format(date_create($horaAtendimento),'H:i'); ?><input type="hidden" name="horaAtendimento" value="<?php echo $horaAtendimento;?>"/></td>
 						</tr>
 						<tr>
 							<td><label for="codigoPaciente">Paciente *</label></td>
