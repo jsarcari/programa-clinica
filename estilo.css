@@ -280,6 +280,10 @@ textarea {
 	height: 74px;
 }
 
+.invisivel {
+	display: none;
+}
+
 .rodape-tabela {
 	padding-top: 10px;
 }

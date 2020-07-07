@@ -15,7 +15,8 @@
 		<main class="normal">
 			<table class="table table-hover" id="tabelaRegistro">
 				<tr><td colspan="6"><h2>Atendimentos</h2></td></tr>
-				
+				<tr><td colspan="6"><label for="filtrar-tabela">Pesquisar:</label>
+					<input type="text" name="filtro" size="30" id="filtrar-tabela" placeholder="Nome do paciente"/></td></tr>
 				<tr><th>Código</th><th>Data</th>
 				<th>Paciente</th><th>Convênio</th><th colspan=2>Ação</th></tr>
 				
@@ -26,11 +27,11 @@
 					</td>
 				<?php } else {
 					foreach ($atendimentos as $atendimento) { ?>
-						<tr>
+						<tr class="tabelaTodos">
 						
 							<td><b> <?php	echo $atendimento['codigoAtendimento'];	?></td>
 							<td><?php		echo date_format(date_create($atendimento['dataAtendimento']),'d/m/Y') . "  " . date_format(date_create($atendimento['horaAtendimento']),'H:i'); ?></td>
-							<td><?php		echo $atendimento['nomePaciente'];	?></td>
+							<td class="info-nome"><?php		echo $atendimento['nomePaciente'];	?></td>
 							<td><?php 		echo $atendimento['convenioAtendimento']; ?></td>
 							<td><a href="atendimentos/atendimentos-p.php?acao=1&chave=<?php echo $atendimento['codigoAtendimento']; ?>"><img src="./images/gridalterar.bmp" title="Alterar"/></a></td>
 							<td><a href="#"><img src="./images/gridexcluir.bmp" title="Excluir" data-toggle="modal" data-target="#modal-<?php echo $atendimento['codigoAtendimento']; ?>"></a></td>
@@ -64,5 +65,6 @@
 				<?php } ?>
 			</table>
 		</main>
+		<script type="text/javascript" src="javascript/filtroTabela.js"></script>
 	</body>
 </html>

@@ -15,6 +15,8 @@
 		<main class="normal">
 			<table class="table table-hover" id="tabelaRegistro">
 				<tr><td colspan="8"><h2>Pacientes</h2></td></tr>
+				<tr><td colspan="6"><label for="filtrar-tabela">Pesquisar:</label>
+					<input type="text" name="filtro" size="30" id="filtrar-tabela" placeholder="Nome do paciente"/></td></tr>
 				<tr><th>Código</th><th>Nome</th><th>Sexo</th>
 				<th>Nascimento</th><th>Responsável</th>
 				<th>Telefone</th><th colspan=2>Ação</th></tr>
@@ -26,10 +28,10 @@
 					</td>
 				<?php } else {
 					foreach ($pacientes as $paciente) { ?>
-						<tr>
+						<tr class="tabelaTodos">
 							
 							<td><b> <?php	echo $paciente['codigoPaciente'];	?></td>
-							<td><?php		echo $paciente['nomePaciente'];	?></td>
+							<td class="info-nome"><?php		echo $paciente['nomePaciente'];	?></td>
 							<td><?php		echo $paciente['sexoPaciente'];	?></td>
 							<td><?php		echo date_format(date_create($paciente['nascimentoPaciente']),'d/m/Y');	?></td>
 							<td><?php		echo $paciente['responsavelPaciente'];	?></td>
@@ -65,5 +67,6 @@
 				<?php } ?>
 			</table>
 		</main>
+		<script type="text/javascript" src="javascript/filtroTabela.js"></script>
 	</body>
 </html>

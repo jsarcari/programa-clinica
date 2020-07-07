@@ -6,8 +6,6 @@ function ChamarLink() {
     
     var dataSistemaCompleta	= new Date();
     
-    //var dataSistema=dataSistemaCompleta.split('/');
-    
     var anoSistema	= dataSistemaCompleta.getFullYear();
     var mesSistema	= dataSistemaCompleta.getMonth();
     mesSistema++;
@@ -24,11 +22,11 @@ function ChamarLink() {
         
     if (anoIdade>=0){ 								//valida se resultado do ano for maior ou igual a zero
 
-            if (diaIdade<0){
-                if(((((((mesSistema==1)||(mesSistema==3))||(mesSistema==5))||(mesSistema==7))||(mesSistema==8))||(mesSistema==10))||(mesSistema==12)){
+            if (diaIdade<0) {
+                if(((((((mesSistema==1)||(mesSistema==3))||(mesSistema==5))||(mesSistema==7))||(mesSistema==8))||(mesSistema==10))||(mesSistema==12)) {
                     diaIdade+=31;
-                } else if (mesSistema==2){
-                    if (anoSistema%4==0){
+                } else if (mesSistema==2) {
+                    if (anoSistema%4==0) {
                         diaIdade+=29;
                     } else {
                         diaIdade+=28;
@@ -46,13 +44,15 @@ function ChamarLink() {
                 mesIdade--;
             }
 
-            if (anoIdade<0){
+            if (anoIdade<0) {
                 anoIdade=0;
             }
             
             if (mesIdade<0){
                 mesIdade+=12;
-            } else if (mesIdade>0) {
+            }
+
+            if (diaNascimento>diaSistema) {
                 mesIdade--;
             }
         

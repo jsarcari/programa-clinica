@@ -92,7 +92,7 @@
 						<option value="Outros">Outros</option></select></td>
 					</tr>
 					<tr rowspan=3>
-						<td colspan=4><textarea name="desdobramentoAtendimento" value="<?php echo $desdobramentoAtendimento; ?>" placeholder="Informe aqui o desdobramento do antendimento"></textarea></td>
+						<td colspan=4><textarea name="desdobramentoAtendimento" placeholder="Informe aqui o desdobramento do antendimento"><?php echo $desdobramentoAtendimento; ?></textarea></td>
 					</tr>
 					<tr>
 						<td colspan=4 class="rodape-tabela">
