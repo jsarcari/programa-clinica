@@ -150,6 +150,12 @@ table {
 	float: center;
 }
 
+.imprimirMenorMaior {
+	text-align: center;
+	color: red;
+	font-size: 12px;
+}
+
 .imprimirIdade {
 	text-align: center;
 	font-style: italic;

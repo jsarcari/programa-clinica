@@ -9,7 +9,7 @@
 	$paciente 	= new Paciente($codigoPaciente,$nomePaciente,$sexoPaciente,$nascimentoPaciente,$responsavelPaciente,$dddResponsavel,$telefoneResponsavel);
 ?>
 
-<html>
+<html lang="pt-br">
 	<head>
 		<meta name="decription" content="formularios em HTML">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -17,7 +17,6 @@
 		<link rel="stylesheet" type="text/css" href="./estilo.css"/>
 	
 		<script type="text/javascript" src="javascript/validacaoPaciente.js"></script>
-		<script type="text/javascript" src="javascript/validarIdade.js"></script>
 		<script type="text/javascript" src="javascript/mascaraData.js"></script>
 		<script type="text/javascript" src="javascript/somenteNumero.js"></script> 
 	</head>
@@ -45,12 +44,14 @@
 							</tr>
 							<tr>
 								<td><label for="nascimentoPaciente">Data de nascimento *</label></td>
-								<td colspan=2><input type="text" value="" size="8" name="nascimentoPaciente" onkeyup="mascaraData(this)" id="nascimentoPaciente" placeholder="__/__/____" maxlength="10"/>
-								<input type="button" value="Verificar" name="btn_vai" onClick="validarIdade(this.form,false);" onclick="validarIdade( false )"/></td>
-
-								</td>
+								<td colspan=2><input type="text" value="" size="8" name="nascimentoPaciente" onkeyup="mascaraData(this)" id="nascimentoPaciente" placeholder="__/__/____" maxlength="10"/></td>
 								<td class="sexo"><input type="radio" name="sexoPaciente" value="F"/>Feminino</td>
 							</tr>
+								<!--teste de captura de value em java script -->
+							<td colspan=2>
+								<div id="receberNascimento" class="imprimirMenorMaior"></div>
+							</td>
+							<!--teste de captura de value em java script -->
 							<tr>
 								<td colspan=4>
 									<fieldset class="responsavel">
@@ -60,10 +61,10 @@
 												<td colspan=2>Os campos seguintes são obrigatórios para menores de 18 anos.</td>
 											</tr>
 											<tr>
-												<td><label for="responsavelPaciente">Nome </label></td><td><input disabled required="required" type="text" size="28" name="responsavelPaciente" value=""/></td>
+												<td><label for="responsavelPaciente">Nome </label></td><td><input disabled required="required" type="text" size="28" name="responsavelPaciente" id="responsavelPaciente" value=""/></td>
 											</tr>
 											<tr>
-												<td><label for="telefoneResponsavel">Telefone </label></td><td><input disabled type="text" size="2" name="dddResponsavel" required="required" value="" placeholder="DDD" maxlength="2"/>  <input disabled type="text" required="required" name="telefoneResponsavel"/></td>
+												<td><label for="telefoneResponsavel">Telefone </label></td><td><input disabled type="text" size="2" name="dddResponsavel" id="dddResponsavel" required="required" value="" placeholder="DDD" maxlength="2"/>  <input disabled type="text" required="required" name="telefoneResponsavel" id="telefoneResponsavel"/></td>
 											</tr>
 										</table>
 									</fieldset>
@@ -82,5 +83,7 @@
 				</form>
 			</div>
 		</main>
+		<script src="javascript/jquery.js"></script>
+		<script src="javascript/validarIdade.js"></script>
 	</body>
 </html>

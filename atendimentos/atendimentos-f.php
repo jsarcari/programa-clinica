@@ -57,7 +57,7 @@
 						<tr>
 							<td><label for="codigoPaciente">Paciente *</label></td>
 							<td colspan=3><select name="codigoPaciente" id="selectOK" onchange="ChamarLink();">
-							<option value="">Selecione o paciente</option>
+							<option value="0">Selecione o paciente</option>
 							
 							
 							<?php $atendimento->buscarPaciente(); ?>
