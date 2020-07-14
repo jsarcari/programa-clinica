@@ -1,11 +1,10 @@
 function ChamarLink() {
-    var valorCombo = $("#selectOK").val();
-    console.log(valorCombo);
+    var valorSelect = $("#selectOK").val();
 
-    if (valorCombo != "0") {
+    if (valorSelect != "0") {
         
-        var	codigo	= valorCombo.split('*');
-        var	dataNascimento = codigo[1].split('-');
+        var	paciente = valorSelect.split('*');
+        var	dataNascimento = paciente[1].split('-');
         
         var dataSistemaCompleta	= new Date();
         

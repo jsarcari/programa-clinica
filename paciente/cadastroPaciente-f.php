@@ -32,11 +32,6 @@
 								<td colspan=3>Campos com * são de preenchimento obrigatório.</td>
 								<td class="sex"><label for="sexoPaciente">  Sexo *</label></td>
 							</tr>
-							<!--<tr>
-								<td><label for="codigoPaciente"></label></td>
-								<td colspan=2><input hidden type="text" size="2" name="codigoPaciente" value=""/></td>
-								<td class="sex"><label for="sexoPaciente">  Sexo *</label></td>
-							</tr>-->
 							<tr>
 								<td><label for="nomePaciente">Nome *</label></td>
 								<td colspan=2><input type="text" name="nomePaciente" value=""/></td>
@@ -44,10 +39,13 @@
 							</tr>
 							<tr>
 								<td><label for="nascimentoPaciente">Data de nascimento *</label></td>
-								<td colspan=2><input type="text" value="" size="8" name="nascimentoPaciente" onkeyup="mascaraData(this)" id="nascimentoPaciente" placeholder="__/__/____" maxlength="10"/></td>
+								<td colspan=2>
+									<input type="text" value="" size="8" name="nascimentoPaciente" onkeyup="mascaraData(this)" id="nascimentoPaciente" placeholder="__/__/____" maxlength="10"/>
+									<input type="hidden" name="idadePaciente" id="idadePaciente" value=""/>
+								</td>
 								<td class="sexo"><input type="radio" name="sexoPaciente" value="F"/>Feminino</td>
 							</tr>
-								<!--teste de captura de value em java script -->
+							<!--teste de captura de value em java script -->
 							<td colspan=2>
 								<div id="receberNascimento" class="imprimirMenorMaior"></div>
 							</td>
@@ -55,16 +53,16 @@
 							<tr>
 								<td colspan=4>
 									<fieldset class="responsavel">
-										<legend>Responsável</legend>
+										<legend id="legendaFieldset">Responsável</legend>
 										<table width="90%" border=0>
 											<tr>
 												<td colspan=2>Os campos seguintes são obrigatórios para menores de 18 anos.</td>
 											</tr>
 											<tr>
-												<td><label for="responsavelPaciente">Nome </label></td><td><input disabled required="required" type="text" size="28" name="responsavelPaciente" id="responsavelPaciente" value=""/></td>
+												<td><label for="responsavelPaciente">Nome </label></td><td><input type="text" size="28" name="responsavelPaciente" id="responsavelPaciente" value=""/></td>
 											</tr>
 											<tr>
-												<td><label for="telefoneResponsavel">Telefone </label></td><td><input disabled type="text" size="2" name="dddResponsavel" id="dddResponsavel" required="required" value="" placeholder="DDD" maxlength="2"/>  <input disabled type="text" required="required" name="telefoneResponsavel" id="telefoneResponsavel"/></td>
+												<td><label for="telefoneResponsavel">Telefone </label></td><td><input type="text" size="2" name="dddResponsavel" id="dddResponsavel" value="" placeholder="DDD" maxlength="2"/>  <input type="text" name="telefoneResponsavel" id="telefoneResponsavel" value="" maxlength="9"/></td>
 											</tr>
 										</table>
 									</fieldset>

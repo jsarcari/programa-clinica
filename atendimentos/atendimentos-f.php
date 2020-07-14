@@ -15,6 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="./estilo.css"/>
 		<script type="text/javascript" src="javascript/validacaoAtendimentos.js"></script>
 		<script type="text/javascript" src="javascript/imprimirIdade.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<main class="normal">
@@ -97,5 +98,6 @@
 				</form>
 			</div>
 		</main>
+		<script src="javascript/jquery.js"></script>
 	</body>
 </html>

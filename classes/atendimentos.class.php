@@ -107,7 +107,7 @@
 					
 				if($rows > 0) {
 					foreach ($pacientes as $paciente) {
-						echo "<option value='" . $paciente['codigoPaciente']."*".$paciente['nascimentoPaciente']."'";
+						echo "<option value='" . $paciente['codigoPaciente']."*".$paciente['nascimentoPaciente']."*".$paciente['nomePaciente']."'";
 						if($paciente['codigoPaciente'] == $this->getCodigoPaciente()){
 							echo " selected ";
 						}

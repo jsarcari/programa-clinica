@@ -171,6 +171,17 @@ table {
 	text-align: right;
 }
 
+fieldset {
+	border: 0.5px solid gray;
+	padding-bottom: 10px;
+}
+
+#legendaFieldset {
+	margin-left: 4px;
+	font-weight: bolder;
+	font-size: 14px;
+}
+
 .atendimentosSexo {
 	float: left;
 	height: 60px;
