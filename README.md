@@ -1,4 +1,4 @@
-# Arcari Nutrição
+# Software para atendimento em clínicas
 
 Projeto pessoal com objetivo de criar um portfólio para mostrar meus conhecimentos em back-end com PHP e MySQL, e front-end com Bootstrap e JS.
 
