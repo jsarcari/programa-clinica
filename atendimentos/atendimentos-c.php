@@ -33,7 +33,7 @@
 							<td><?php		echo date_format(date_create($atendimento['dataAtendimento']),'d/m/Y') . "  " . date_format(date_create($atendimento['horaAtendimento']),'H:i'); ?></td>
 							<td class="info-nome"><?php		echo $atendimento['nomePaciente'];	?></td>
 							<td><?php 		echo $atendimento['convenioAtendimento']; ?></td>
-							<td><a id="gerarPDF" href="./gerarPDF.php?chave=<?php echo $atendimento['codigoAtendimento']; ?>"><i class="fas fa-print" title="Gerar comprovante"></i></a></td>
+							<td><a id="gerarPDF" href="pdf/gerarPDF.php?chave=<?php echo $atendimento['codigoAtendimento']; ?>" target="_blank"><i class="fas fa-print" title="Gerar comprovante"></i></a></td>
 							<td><a href="atendimentos/atendimentos-p.php?acao=1&chave=<?php echo $atendimento['codigoAtendimento']; ?>"><img src="./images/gridalterar.bmp" title="Alterar"/></a></td>
 							<td><a href="#"><img src="./images/gridexcluir.bmp" title="Excluir" data-toggle="modal" data-target="#modal-<?php echo $atendimento['codigoAtendimento']; ?>"></a></td>
 						<div class="modal fade" id="modal-<?php echo $atendimento['codigoAtendimento']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

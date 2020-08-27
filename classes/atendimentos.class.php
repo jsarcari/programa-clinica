@@ -257,6 +257,24 @@
 			}
 		}
 
+		public function buscarCodigo() {
+			try {
+				$conexao = new Conexao();
+				$pdo = $conexao->conectar();
+				$query = $pdo->prepare("	SELECT	codigoAtendimento
+											FROM	atendimento
+											WHERE	codigoAtendimento = (	SELECT MAX(codigoAtendimento)
+																						FROM atendimento);");
+				$query->execute();
+				$res = $query->fetchObject();
+	
+				return $res->codigoAtendimento;
+			
+			} catch (PDOException $e) {
+				exit('Erro: ' . $e->getMessage());
+			}
+		}
+
 		public function ultimaChamada() {
 			try {
 				$conexao = new Conexao();

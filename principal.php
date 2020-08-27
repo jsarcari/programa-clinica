@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	error_reporting(0);
+	//error_reporting(0);
 	include_once 'validasessao.php';
 ?>
 <html>
@@ -14,12 +14,6 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<link rel="stylesheet" type="text/css" href="estilo.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
-	<script language="javascript">
-		function conteudo(){
-			d = document;
-			d.getElementByld(conteudo).innerHtml="conteudo";
-		}
-	</script>
 	
 	</head>
 	<body>
