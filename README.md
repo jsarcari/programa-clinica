@@ -20,3 +20,6 @@ A idéia do projeto surgiu a partir de um trabalho acadêmico durante o curso t�
 * Criar uma base de dados com o nome *clinica*
 * Importar as tabelas através do arquivo *database.sql*
 * O usuário e senha estão definidos no arquivo *classes/config.php*, por padrão foi definido usuário *root* e senha *root*, mas poderão ser alterados conforme as configurações do seu banco de dados.
+
+## Acessar a aplicação
+Insira no login o usuário *admin* e a senha *123*
