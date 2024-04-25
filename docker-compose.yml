@@ -7,7 +7,7 @@ services:
       - "8080:80"
       - "443:443"
     volumes:
-      - /var/www/html
+      - ./:/var/www/html
     depends_on:
       - db
     restart: always
@@ -16,10 +16,12 @@ services:
     image: mysql:8.3
     volumes:
       - ./database.sql:/docker-entrypoint-initdb.d/database.sql
+      - clinica:/var/lib/mysql
     environment:
       - MYSQL_HOST=localhost
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=sapz
     ports:
       - 3306:3306
-
+volumes:
+  clinica:

@@ -2,8 +2,6 @@ FROM php:7.4-apache
 
 WORKDIR /var/www/html
 
-COPY . .
-
 # Install PHP extensions and other dependencies
 RUN apt-get update && \
     apt-get install -y libpng-dev && \
