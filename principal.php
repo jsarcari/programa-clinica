@@ -36,7 +36,7 @@
 				}
 			?>
 		<footer>
-		<p class="copyright">&copy; Juan dos Santos Arcari - 2020</p>
+		<p class="copyright">&copy; Juan dos Santos Arcari - 2014-<?php echo date('Y'); ?></p>
 		</footer>
 		<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

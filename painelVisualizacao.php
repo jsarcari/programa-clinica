@@ -23,8 +23,8 @@
 				<p>Guichê</p>
 				<p id="dadoPainel"><?php echo $chamada['guicheAtendimento']; ?></p>
 				<div id="dataUltima">
-					<i class="fas fa-calendar-alt"></i>&emsp;<?php echo date_format(date_create($chamada['dataAtendimento']),'d/m/Y'); ?>
-					&emsp;<i class="far fa-clock"></i>&emsp;<?php echo date_format(date_create($chamada['horaAtendimento']),'H:i'); ?>
+					<i class="fas fa-calendar-alt"></i>&emsp;<?php echo date('d/m/Y'); ?>
+					&emsp;<i class="far fa-clock"></i>&emsp;<?php echo date('H:i'); ?>
 				</div>
 			</div>
 			<div id="ultimas">
