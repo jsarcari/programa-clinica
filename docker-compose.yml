@@ -1,0 +1,25 @@
+version: '1.0'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+      - "443:443"
+    volumes:
+      - /var/www/html
+    depends_on:
+      - db
+    restart: always
+  db:
+    container_name: clinica_db
+    image: mysql:8.3
+    volumes:
+      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=sapz
+    ports:
+      - 3306:3306
+

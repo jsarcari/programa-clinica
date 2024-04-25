@@ -5,8 +5,8 @@
 	
 	session_start();
 
-	unset($_SESSION[id]);
-	unset($_SESSION[nome]);
+	unset($_SESSION['id']);
+	unset($_SESSION['nome']);
 	
 	$username = addslashes(htmlentities($_POST['usuario']));
 	$password = addslashes(htmlentities($_POST['senha']));
@@ -32,8 +32,8 @@
 			}
 				
 			session_start();
-			$_SESSION[id]	= $usuario;
-			$_SESSION[nome]	= $senha;
+			$_SESSION['id']	= $usuario;
+			$_SESSION['nome']	= $senha;
 
 			setcookie("exemplo", $codigoUsuario);
 

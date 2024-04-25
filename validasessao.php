@@ -1,5 +1,4 @@
-<?php
-	session_start();
+<?php session_start();
 	ob_start();
 		
 	if(!isset ($_SESSION['id']) AND !isset ($_SESSION['nome'])):

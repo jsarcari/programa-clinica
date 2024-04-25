@@ -77,9 +77,8 @@ a {
 }
 
 .normal {
-	display: inline-block;
 	padding: 65px;
-	margin-left: 164px;
+	margin: 0 auto;
 	width: 960px;
 	min-height: 410px;
 	background: #004869;
@@ -215,13 +214,12 @@ fieldset {
 }
 
 .painel {
-	display: inline-block;
 	background-color: #004869;
 	color: #fff;
 	font-family: Arial;
 	text-align: center;
 	font-size: 20px;
-	margin-left: 170px;
+	margin: 0 auto;
 	width: 960px;
 	height: 450px;
 }

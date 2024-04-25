@@ -1,6 +1,6 @@
 <?php
 define('DBUSER','root');
 define('DBPWD','root');
-define('DBHOST','localhost');
-define('DBNAME','clinica');
+define('DBHOST','clinica_db');
+define('DBNAME','sapz');
 ?>

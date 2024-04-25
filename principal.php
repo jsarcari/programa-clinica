@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <?php
-	//error_reporting(0);
 	include_once 'validasessao.php';
 ?>
 <html>
