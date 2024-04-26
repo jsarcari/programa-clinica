@@ -41,9 +41,11 @@ function ChamarLink() {
                         
                 if (mesNascimento>mesSistema){
                     anoIdade--;
-                } else if ((mesNascimento==mesSistema)&&(diaNascimento>diaSistema)){
+                } 
+                
+                if ((mesNascimento==mesSistema)&&(diaNascimento>diaSistema)){
                     anoIdade--;
-                    mesIdade--;
+                    mesIdade=11;
                 }
 
                 if (anoIdade<0) {
@@ -54,7 +56,7 @@ function ChamarLink() {
                     mesIdade+=12;
                 }
 
-                if (diaNascimento>diaSistema) {
+                if ((mesNascimento!=mesSistema) && (diaNascimento>diaSistema)) {
                     mesIdade--;
                 }
             

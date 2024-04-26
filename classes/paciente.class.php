@@ -230,5 +230,28 @@
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
+
+		public function calcularIdade($nascimentoPaciente) {
+
+			$str = str_split($nascimentoPaciente, 4);
+
+			$diaNascimento = $nascimentoPaciente[8] . $nascimentoPaciente[9];
+			$anoNascimento = $str[0];
+			$mesNascimento = $nascimentoPaciente[5] . $nascimentoPaciente[6];
+
+			$idade = date('Y') - $anoNascimento;
+
+			if (date('m') < $mesNascimento) {
+				$idade--;
+			}
+
+			if (date('m') == $mesNascimento) {
+				if (date('d') < $diaNascimento) {
+					$idade--;
+				}
+			}
+
+			return $idade;
+		}
 	}
 ?>
