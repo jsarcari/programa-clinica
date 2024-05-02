@@ -1,11 +1,11 @@
 <?php
-			ob_start();
-			include_once("./classes/atendimentos.class.php");
+	ob_start();
+	include_once("./classes/atendimentos.class.php");
 					
-			$atendimento 	= new Atendimentos($codigoAtendimento, $senhaAtendimento, $guicheAtendimento, $dataAtendimento, $horaAtendimento, $codigoPaciente, $convenioAtendimento, $desdobramentoAtendimento);		
-			
-			$atendimentos = $atendimento->listarAtendimento();
-		?>
+	$atendimento 	= new Atendimentos($codigoAtendimento, $senhaAtendimento, $guicheAtendimento, $dataAtendimento, $horaAtendimento, $codigoPaciente, $convenioAtendimento, $desdobramentoAtendimento);	
+	$atendimentos = $atendimento->listarAtendimento();
+
+?>
 <html>
 	<head>
 		<title>Registro de atendimentos</title>

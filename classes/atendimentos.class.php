@@ -350,6 +350,38 @@
 				exit('Erro: ' . $e->getMessage());
 			}
 		}
+
+		public function listarHorarios() {
+			try {
+				$conexao = new Conexao();
+				$pdo = $conexao->conectar();
+				$query = $pdo->prepare("	SELECT	dataAtendimento, 
+													horaAtendimento,
+													guicheAtendimento
+											FROM	atendimento");
+				$query->execute();
+				$atendimentos	= $query->fetchAll();
+				$pdo = $conexao->encerrar();
+				$horarios = array();
+				foreach ($atendimentos as $atendimento) {
+					$hora = $atendimento['horaAtendimento'][0] . $atendimento['horaAtendimento'][1];
+					$minuto = $atendimento['horaAtendimento'][3] . $atendimento['horaAtendimento'][4];
+					$horario = $hora . ':' . $minuto;
+					array_push($horarios, array($atendimento['dataAtendimento'], $horario, $atendimento['guicheAtendimento']));
+				}
+				return $horarios;
+			} catch (PDOException $e) {
+				exit('Erro: ' . $e->getMessage());
+			}
+		}
+
+		function listarGuichePorHorarios(array $arr) {
+			$ocorrenciasGuicheHorario = [] ;
+			array_walk( $arr, function($value, $key) use (&$ocorrenciasGuicheHorario) {
+			   @ $ocorrenciasGuicheHorario[$value[0]][$value[1]][$value[2]]++;
+			});
+			return $ocorrenciasGuicheHorario;
+		}  
 		
 	}
 ?>

@@ -43,6 +43,7 @@ CREATE TABLE `atendimento` (
 
 LOCK TABLES `atendimento` WRITE;
 /*!40000 ALTER TABLE `atendimento` DISABLE KEYS */;
+INSERT INTO `atendimento` VALUES (1, 1, 4, '2024-05-01', '21:41:50', 1, 'SUS', 'Apresenta febre e dores no corpo');
 /*!40000 ALTER TABLE `atendimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -96,6 +97,7 @@ CREATE TABLE `paciente` (
 
 LOCK TABLES `paciente` WRITE;
 /*!40000 ALTER TABLE `paciente` DISABLE KEYS */;
+INSERT INTO `paciente` VALUES (1, 'Mara Silva', 'F', '1980-08-19', '', '', '');
 /*!40000 ALTER TABLE `paciente` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

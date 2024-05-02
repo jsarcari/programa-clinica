@@ -1,0 +1,8 @@
+Atendimento
+ [x] Atendimento deve receber pacientes
+ [x] Mais de um atendimento no mesmo guiche no mesmo horario
+
+Paciente
+ [ ] Verificar se existe paciente
+ [x] Paciente menor de idade sem responsavel
+

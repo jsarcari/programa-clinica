@@ -5,8 +5,13 @@
 
     class PacienteTest extends TestCase {
 
-        /** @test */
-        public function testeResponsavelPacienteMenorDeIdade() {
+        public function testVerificarSeExistePaciente() {
+            $paciente 	= new Paciente($codigoPaciente,$nomePaciente,$sexoPaciente,$nascimentoPaciente,$responsavelPaciente,$dddResponsavel,$telefoneResponsavel);
+            
+            $this->assertTrue($paciente->localizarPaciente(1));
+        }
+
+        public function testPacienteMenorDeIdadeSemResponsavel() {
             $semResponsavel = null;
             $paciente 	= new Paciente($codigoPaciente,$nomePaciente,$sexoPaciente,$nascimentoPaciente,$responsavelPaciente,$dddResponsavel,$telefoneResponsavel);
             $pacientes = $paciente->listarPaciente();
