@@ -36,4 +36,12 @@ class PacientesController extends Controller
         return view('pacientes.edit')->with('paciente', $paciente);
     }
 
+    public function update(Paciente $paciente, Request $request)
+    {
+        $paciente->fill($request->all());
+        $paciente->save();
+
+        return to_route('pacientes.index')->with('mensagem.sucesso'. 'Paciente atualizado com sucesso.');
+    }
+
 }

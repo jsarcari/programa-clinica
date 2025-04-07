@@ -24,6 +24,8 @@ Route::controller(PacientesController::class)->group(function() {
     Route::get('/pacientes/cadastrar', 'create');
     Route::post('/pacientes/salvar', 'store');
     Route::delete('/pacientes/excluir/{paciente}', 'destroy')->name('pacientes.excluir');
+    Route::get('/pacientes/editar/{paciente}', 'edit')->name('pacientes.edit');
+    Route::put('/pacientes/{paciente}', 'update')->name('pacientes.update');
 });
 
 Route::controller(AtendimentosController::class)->group(function() {
