@@ -16,15 +16,15 @@
 					@foreach ($pacientes as $paciente)
 						<tr class="tabelaTodos">
 							
-							<td><b> {{ $paciente->codigoPaciente }}</td>
-							<td class="info-nome">{{ $paciente->nomePaciente }}</td>
-							<td>{{ $paciente->sexoPaciente }}</td>
-							<td>{{ date_format(date_create($paciente->nascimentoPaciente),'d/m/Y') }}</td>
-							<td>{{ $paciente->responsavelPaciente	}}</td>
-							<td>{{ $paciente->dddResponsavel }} {{ $paciente->telefoneResponsavel }}</td>
-							<td><a href="{{ route('pacientes.edit', $paciente->codigoPaciente) }}"><img src="./images/gridalterar.bmp" title="Alterar"/></a></td>
-							<td><a href="#"><img src="./images/gridexcluir.bmp" title="Excluir" data-toggle="modal" data-target="#modal-{{$paciente->codigoPaciente}}"/></a></td>
-							<div class="modal fade" id="modal-{{$paciente->codigoPaciente}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<td><b> {{ $paciente->codigopaciente }}</td>
+							<td class="info-nome">{{ $paciente->nomepaciente }}</td>
+							<td>{{ $paciente->sexopaciente }}</td>
+							<td>{{ date_format(date_create($paciente->nascimentopaciente),'d/m/Y') }}</td>
+							<td>{{ $paciente->responsavelpaciente	}}</td>
+							<td>{{ $paciente->dddresponsavel }} {{ $paciente->telefoneresponsavel }}</td>
+							<td><a href="{{ route('pacientes.edit', ['paciente' => $paciente->codigopaciente]) }}"><img src="./images/gridalterar.bmp" title="Alterar"/></a></td>
+							<td><a href="#"><img src="./images/gridexcluir.bmp" title="Excluir" data-toggle="modal" data-target="#modal-{{$paciente->codigopaciente}}"/></a></td>
+							<div class="modal fade" id="modal-{{$paciente->codigopaciente}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content background1">
 										<div class="modal-header">
@@ -34,10 +34,10 @@
 											</button>
 										</div>
 										<div class="modal-body">
-											<form name="formExcluir" method="POST" action="{{ route('pacientes.destroy', $paciente->codigoPaciente) }}">
+											<form name="formExcluir" method="POST" action="{{ route('pacientes.excluir', $paciente->codigopaciente) }}">
 												@csrf
 												@method('DELETE')
-												Deseja excluir o paciente <b>{{ $paciente->nomePaciente }}</b>?
+												Deseja excluir o paciente <b>{{ $paciente->nomepaciente }}</b>?
 										</div>
 										<div class="modal-footer">
 											<button type="submit" class="btn btn-primary">Excluir</button>

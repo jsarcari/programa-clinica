@@ -10,7 +10,7 @@ class PacientesController extends Controller
 
     public function index()
     {
-        $pacientes = Paciente::query()->orderBy('nomePaciente','asc')->get();
+        $pacientes = Paciente::query()->orderBy('nomepaciente','asc')->get();
         return view('pacientes.index')->with('pacientes', $pacientes);
     }
 
@@ -21,6 +21,11 @@ class PacientesController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'nomepaciente' => 'required',
+            'sexopaciente' => 'required',
+            'nascimentopaciente' => 'required'
+        ]);
         Paciente::create($request->all());
         return redirect('/pacientes');
     }

@@ -2,29 +2,29 @@
     <form name="form" method="post" action="{{ $action }}" onsubmit="return validar();">
         @csrf
 
-        @isset($nomePaciente)
+        @if($update)
         @method('PUT')
-        @endisset
+        @endif
         <table>
                 <tr>
                     <td colspan=4><h2>Cadastro de pacientes</h2></td>
                 </tr>
                 <tr>
                     <td colspan=3>Campos com * são de preenchimento obrigatório.</td>
-                    <td class="sex"><label for="sexoPaciente">  Sexo *</label></td>
+                    <td class="sex"><label for="sexopaciente">  Sexo *</label></td>
                 </tr>
                 <tr>
-                    <td><label for="nomePaciente">Nome *</label></td>
-                    <td colspan=2><input type="text" name="nomePaciente" @isset($nomePaciente)value="{{ $nomePaciente }}"@endisset/></td>
-                    <td class="sexo">&nbsp;<input type="radio" name="sexoPaciente" value="M"/>Masculino</td>
+                    <td><label for="nomepaciente">Nome *</label></td>
+                    <td colspan=2><input type="text" name="nomepaciente" @isset($nomepaciente)value="{{ $nomepaciente }}"@endisset/></td>
+                    <td class="sexo">&nbsp;<input type="radio" name="sexopaciente" value="M" {{ isset($sexopaciente) && $sexopaciente == "M" ? 'checked' : '' }}/>Masculino</td>
                 </tr>
                 <tr>
-                    <td><label for="nascimentoPaciente">Data de nascimento *</label></td>
+                    <td><label for="nascimentopaciente">Data de nascimento *</label></td>
                     <td colspan=2>
-                        <input type="text" @isset($nascimentoPaciente)value="{{ $nascimentoPaciente }}"@endisset size="8" name="nascimentoPaciente" onkeyup="mascaraData(this)" id="nascimentoPaciente" placeholder="__/__/____" maxlength="10"/>
+                        <input type="text" @isset($nascimentopaciente)value="{{ \Carbon\Carbon::parse($nascimentopaciente)->format('d/m/Y') }}"@endisset size="8" name="nascimentopaciente" onkeyup="mascaraData(this)" id="nascimentopaciente" placeholder="__/__/____" maxlength="10"/>
                         <input type="hidden" name="idadePaciente" id="idadePaciente" value=""/>
                     </td>
-                    <td class="sexo"><input type="radio" name="sexoPaciente" value="F"/>Feminino</td>
+                    <td class="sexo"><input type="radio" name="sexopaciente" value="F" {{ isset($sexopaciente) && $sexopaciente == "F" ? 'checked' : '' }}/>Feminino</td>
                 </tr>
                 <td colspan=2>
                     <div id="receberNascimento" class="imprimirMenorMaior"></div>
@@ -38,10 +38,10 @@
                                     <td colspan=2>Os campos seguintes são obrigatórios para menores de 18 anos.</td>
                                 </tr>
                                 <tr>
-                                    <td><label for="responsavelPaciente">Nome </label></td><td><input type="text" size="28" name="responsavelPaciente" id="responsavelPaciente" @isset($responsavelPaciente)value="{{ $responsavelPaciente }}"@endisset/></td>
+                                    <td><label for="responsavelpaciente">Nome </label></td><td><input type="text" size="28" name="responsavelpaciente" id="responsavelPaciente" @isset($responsavelPaciente)value="{{ $responsavelPaciente }}"@endisset/></td>
                                 </tr>
                                 <tr>
-                                    <td><label for="telefoneResponsavel">Telefone </label></td><td><input type="text" size="2" name="dddResponsavel" id="dddResponsavel" @isset($dddResponsavel)value="{{ $dddResponsavel }}"@endisset placeholder="DDD" maxlength="2"/>  <input type="text" name="telefoneResponsavel" id="telefoneResponsavel" @isset($telefoneResponsavel)value="{{ $telefoneResponsavel }}"@endisset maxlength="9"/></td>
+                                    <td><label for="telefoneresponsavel">Telefone </label></td><td><input type="text" size="2" name="dddresponsavel" id="dddresponsavel" @isset($dddResponsavel)value="{{ $dddResponsavel }}"@endisset placeholder="DDD" maxlength="2"/>  <input type="text" name="telefoneresponsavel" id="telefoneResponsavel" @isset($telefoneResponsavel)value="{{ $telefoneResponsavel }}"@endisset maxlength="9"/></td>
                                 </tr>
                             </table>
                         </fieldset>

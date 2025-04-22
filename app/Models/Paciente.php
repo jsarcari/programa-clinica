@@ -11,7 +11,9 @@ class Paciente extends Model
 
     protected $table = 'paciente';
 
-    protected $fillable = ['nomePaciente', 'sexoPaciente', 'nascimentoPaciente', 'responsavelPaciente', 'dddResponsavel', 'telefoneResponsavel'];
+    protected $primaryKey = 'codigopaciente';
+
+    protected $fillable = ['nomepaciente', 'sexopaciente', 'nascimentopaciente', 'responsavelpaciente', 'dddresponsavel', 'telefoneresponsavel'];
 
     public $timestamps = false;
 }

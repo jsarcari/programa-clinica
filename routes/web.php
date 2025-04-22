@@ -20,9 +20,9 @@ Route::get('/', function () {
 });
 
 Route::controller(PacientesController::class)->group(function() {
-    Route::get('/pacientes', 'index');
+    Route::get('/pacientes', 'index')->name('pacientes.index');
     Route::get('/pacientes/cadastrar', 'create');
-    Route::post('/pacientes/salvar', 'store');
+    Route::post('/pacientes/salvar', 'store')->name('pacientes.store');
     Route::delete('/pacientes/excluir/{paciente}', 'destroy')->name('pacientes.excluir');
     Route::get('/pacientes/editar/{paciente}', 'edit')->name('pacientes.edit');
     Route::put('/pacientes/{paciente}', 'update')->name('pacientes.update');
