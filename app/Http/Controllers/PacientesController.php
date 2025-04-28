@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Paciente;
+use App\Http\Requests\PacientesFormRequest;
 
 class PacientesController extends Controller
 {
@@ -19,13 +20,8 @@ class PacientesController extends Controller
         return view('pacientes.create');
     }
 
-    public function store(Request $request)
+    public function store(PacientesFormRequest $request)
     {
-        $request->validate([
-            'nomepaciente' => 'required',
-            'sexopaciente' => 'required',
-            'nascimentopaciente' => 'required'
-        ]);
         Paciente::create($request->all());
         return redirect('/pacientes');
     }
@@ -41,7 +37,7 @@ class PacientesController extends Controller
         return view('pacientes.edit')->with('paciente', $paciente);
     }
 
-    public function update(Paciente $paciente, Request $request)
+    public function update(Paciente $paciente, PacientesFormRequest $request)
     {
         $paciente->fill($request->all());
         $paciente->save();
